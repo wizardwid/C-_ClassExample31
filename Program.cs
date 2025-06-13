@@ -11,7 +11,6 @@ namespace ClassExample31
         class Parent
         {
             public static int counter = 0;
-
             public void CountParent()
             {
                 Parent.counter++;
@@ -44,8 +43,6 @@ namespace ClassExample31
         {
             Child childA = new Child("abc");
             Child childB = new Child(3L);
-            // int < long < float < double 
-            //  4     8      4      8
 
             Parent parent = new Parent();
             Child child = new Child();
@@ -57,9 +54,6 @@ namespace ClassExample31
             Console.WriteLine(Child.counter);
 
         }
-
-
-
 
     }
 }
