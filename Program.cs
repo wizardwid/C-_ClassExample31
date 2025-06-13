@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace ClassExample31
 {
     internal class Program
     {
+        private static bool number;
+
         class Parent
         {
             public static int counter = 0;
@@ -41,6 +44,12 @@ namespace ClassExample31
 
         static void Main(string[] args)
         {
+
+            // 섀도잉
+            int number = 20; 
+            Console.WriteLine(number); // 클래스 변수 이름이 가려짐(shadowing)
+            Console.WriteLine(Program.number); // 호출하고 싶으면 클래스 변수명으로 사용
+
             Child childA = new Child("abc");
             Child childB = new Child(3L);
 
@@ -54,6 +63,5 @@ namespace ClassExample31
             Console.WriteLine(Child.counter);
 
         }
-
     }
 }
