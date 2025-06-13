@@ -39,6 +39,7 @@ namespace ClassExample31
                 Console.WriteLine("Child(dobule param)");
             }
         }
+
         static void Main(string[] args)
         {
             Child childA = new Child("abc");
@@ -56,5 +57,9 @@ namespace ClassExample31
             Console.WriteLine(Child.counter);
 
         }
+
+
+
+
     }
 }
