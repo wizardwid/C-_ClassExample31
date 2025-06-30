@@ -19,6 +19,10 @@ namespace ClassExample31
             {
                 Console.WriteLine("부모의 메서드");
             }
+            public virtual void MethodO()
+            {
+                Console.WriteLine("부모의 메서드");
+            }
 
             public void CountParent()
             {
@@ -33,6 +37,10 @@ namespace ClassExample31
 
             public new String variable = "Hiding";
             public new void Method()
+            {
+                Console.WriteLine("자식의 메서드");
+            }
+            public override void MethodO()
             {
                 Console.WriteLine("자식의 메서드");
             }
@@ -82,6 +90,10 @@ namespace ClassExample31
             // 메서드 하이딩
             child3.Method(); // 자식 메서드 출력
             ((Parent)child3).Method(); // 부모 메서드 출력
+
+            // 메서드 오버라이딩
+            child3.MethodO(); // 자식 메서드 출력
+            ((Parent)child3).MethodO(); // 부모 메서드 출력
         }
     }
 }
